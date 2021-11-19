@@ -29,10 +29,10 @@ function ReportList() {
   const updateTotal = () => {
     setTimeout(() => {
       const sum = itemsList.reduce((sum, item) => {
-        return sum + (item.amount * (!!rates[item.currency] ? rates[item.currency] : 0)); // only for demo purposes lacking currencies set to zero
+        return sum + (item.amount * (!!rates[item.currency] ? rates[item.currency] : 0)); // only for demo purposes lacking currencies set to zero. In othere cases, there is supposed to be a proper currencies handler
       }, 0);
       setTotal(sum);
-    }, 0);
+    }, 1000); // just for demo purposes, there was added a timeout. In other cases, there is supposed to be proper handler for the API response and the total calculation
   };
 
   const submitReport = (e) => {
