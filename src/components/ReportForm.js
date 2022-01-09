@@ -56,13 +56,14 @@ function ReportForm() {
           <tr>
             <td>
               <h4>Amount</h4>
-              <input type="number" name="amount" id="amount" value={amount} onChange={updateAmount} ref={amountRef} min="0"
+              <input type="number" name="amount" id="amount" value={amount} onChange={updateAmount} ref={amountRef}
+                     min="0"
                      max="1000"/>
             </td>
             <td>
               <h4>Currency</h4>
-              <FormSelect  name="currency" id="currency" value={currency} onChange={updateCurrency}
-                           ref={currencyRef}>
+              <FormSelect name="currency" id="currency" value={currency} onChange={updateCurrency}
+                          ref={currencyRef}>
                 <option>Currency</option>
                 {
                   CURRENCIES.map(c => {
@@ -79,20 +80,10 @@ function ReportForm() {
                      ref={descriptionRef}/>
             </td>
             <td>
-              <br/>
-              <br/>
-              <br/>
-              <br/>
               <button type="submit" id="button">Add</button>
             </td>
           </tr>
         </Table>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-
       </form>
     </>
   );
